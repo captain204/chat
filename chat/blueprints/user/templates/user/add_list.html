@@ -1,0 +1,36 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+{% block title %}My Dashboard{% endblock %}
+{% block body %}
+
+<div class="row">
+    <div class="col-md-5">  
+        <div class="card" style="width: 38rem;">
+            <div class="card-header">
+              Dashboard
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Inbox</li>
+              <li class="list-group-item">Find Friends</li>
+              <li class="list-group-item">Friends</li>
+              <li class="list-group-item">Logout</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">  
+      <div class="card" style="width: 38rem;">
+          <div class="card-header">
+            <h4 class="display-1 text-center">Add New Friend</h4>
+          </div>
+          <ul class="list-group list-group-flush">
+            {% for user in list %}
+            <li class="list-group-item">{{user.firstname}} &nbsp;&nbsp;{{user.lastname}}
+            <a href="/add_friend/{{user.id}}" class="btn btn-primary pull-left">Add Friend</a>
+            </li>
+            {%endfor%}
+          </ul>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

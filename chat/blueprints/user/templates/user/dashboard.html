@@ -1,0 +1,43 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+{% block title %}My Dashboard{% endblock %}
+{% block body %}
+
+<div class="row">
+    <div class="col-md-5">  
+        <div class="card" style="width: 38rem;">
+            <div class="card-header">
+              Dashboard
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Inbox</li>
+              <li class="list-group-item">Friends</li>
+              <li class="list-group-item">Logout</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-5">  
+      <div class="card" style="width: 38rem;">
+          <div class="card-header">
+            <h4 class="display-1">Messages</h4>
+          </div>
+          <h3 class="display-1"><a href="#">Eniola Badmus</a></h3>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
